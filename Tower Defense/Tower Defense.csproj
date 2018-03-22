@@ -301,7 +301,9 @@
     <Compile Include="Assets\Scripts\Enemy\WaveSpawn.cs" />
     <Compile Include="Assets\Scripts\Enemy\Waypoints.cs" />
     <Compile Include="Assets\Scripts\GenerateMap.cs" />
+    <Compile Include="Assets\Scripts\Turret\Builder.cs" />
     <Compile Include="Assets\Scripts\Turret\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Turret\Placement.cs" />
     <Compile Include="Assets\Scripts\Turret\Turret.cs" />
   </ItemGroup>
   <ItemGroup>

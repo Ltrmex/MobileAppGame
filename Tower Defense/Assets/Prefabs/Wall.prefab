@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33980307009654896}
   - component: {fileID: 65606971506104732}
   - component: {fileID: 23931098790621810}
+  - component: {fileID: 114397452298786888}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1292590630540320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 10, y: 3, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,3 +96,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114397452298786888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1292590630540320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ab9d00bc9b5304ab3547cce823f0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startColor: {r: 0.020761244, g: 0.35294116, b: 0.14676052, a: 1}
+  hoverColor: {r: 1, g: 0, b: 0, a: 0}
+  offset: {x: 0, y: 1.3, z: 0}
