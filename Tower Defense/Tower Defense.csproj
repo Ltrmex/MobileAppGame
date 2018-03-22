@@ -298,7 +298,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawn.cs" />
     <Compile Include="Assets\Scripts\GenerateMap.cs" />
     <Compile Include="Assets\Scripts\WaveSpawn.cs" />
     <Compile Include="Assets\Scripts\Waypoints.cs" />
