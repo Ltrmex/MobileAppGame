@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GenerateMap : MonoBehaviour {
     public GameObject[] prefabs;
+    public static string difficulty = "Medium";
+    public GameObject start;
 
     // Use this for initialization
     void Start() {
@@ -32,9 +34,23 @@ public class GenerateMap : MonoBehaviour {
     }   //  PlaceWall()
 
     private string[] Read() {
-        TextAsset bind = Resources.Load("Medium") as TextAsset;
+        TextAsset bind = Resources.Load(difficulty) as TextAsset;
         string data = bind.text.Replace(Environment.NewLine, string.Empty);
+        GameObject waypoints = Resources.Load("Easy Waypoints") as GameObject; ;
 
-        return data.Split('-');
+        if (difficulty == "Easy") {
+            start.transform.position = new Vector3(100f, 0f, 80f);
+        }   //  if
+        else if (difficulty == "Medium") {
+            waypoints = Resources.Load("Medium Waypoints") as GameObject;
+            start.transform.position = new Vector3(130f, 0f, 140f);
+        }   //  else if
+        else {
+
+        }   //  else
+
+        Instantiate(waypoints, waypoints.transform.position, waypoints.transform.rotation);
+
+        return data.Split('!');
     }   // Read() 
 }   //  GenerateMap
