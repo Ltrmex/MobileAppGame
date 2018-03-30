@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour {
     private Transform target;   //  enemy target
     public float speed = 70f;   //  speed of bullets
     public GameObject impactEffect; //  when bullet hits the enemy
-
+    
     //  Set the enemy target
     public void Seek(Transform _target) {
         target = _target;
@@ -44,7 +44,8 @@ public class Bullet : MonoBehaviour {
         GameObject effect = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effect, 2f);    //  destroy the effect after two seconds
 
-        Destroy(target.gameObject); //  destroy target
+        target.GetComponent<EnemyHealth>().TakeDamage(50);
+
         Destroy(gameObject);    //  destroy bullet
     }   //  HitTarget()
 }   //  Bullet
