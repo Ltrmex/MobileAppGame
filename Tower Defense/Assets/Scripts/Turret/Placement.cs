@@ -6,9 +6,11 @@ public class Placement : MonoBehaviour {
     public Vector3 offset;
     private new Renderer renderer;
     private GameObject place;
+    private PlayerStats playerStats;
 
     private void Start() {
         renderer = GetComponent<Renderer>();
+        playerStats = GameObject.FindGameObjectWithTag("Manager").GetComponent<PlayerStats>();
     }   //  Start()
 
     private void OnMouseEnter() {
@@ -21,12 +23,16 @@ public class Placement : MonoBehaviour {
 
     private void OnMouseDown() {
         if (place != null) {
-            Debug.Log("Already occupied");
+            Debug.Log("Already Occupied!");
             return;
         }   //  if
+        else if (playerStats.turrets <= 0) {
+            Debug.Log("Not Enough Turrets Bought!");
+            return;
+        }   //  else if
 
         GameObject build = Builder.instance.GetTurret();
         place = (GameObject)Instantiate(build, transform.position + offset,transform.rotation);
-
+        --playerStats.turrets;
     }   //  OnMouseDown()
 }   //  Placement
