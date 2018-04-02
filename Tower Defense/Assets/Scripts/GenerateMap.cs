@@ -5,9 +5,11 @@ public class GenerateMap : MonoBehaviour {
     public GameObject[] prefabs;
     public static string difficulty = "Medium";
     public GameObject start;
+    private GameObject mainCamera;
 
     // Use this for initialization
     void Start() {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         CreateMap();
     }   //  Start ()
 
@@ -40,13 +42,17 @@ public class GenerateMap : MonoBehaviour {
 
         if (difficulty == "Easy") {
             start.transform.position = new Vector3(100f, 0f, 80f);
+            mainCamera.transform.position = new Vector3(50f, 100f, 20f);
         }   //  if
         else if (difficulty == "Medium") {
             waypoints = Resources.Load("Medium Waypoints") as GameObject;
             start.transform.position = new Vector3(130f, 0f, 140f);
+            mainCamera.transform.position = new Vector3(70f, 150f, 30f);
         }   //  else if
         else {
-
+            waypoints = Resources.Load("Advanced Waypoints") as GameObject;
+            start.transform.position = new Vector3(0f, 0f, 250f);
+            mainCamera.transform.position = new Vector3(120f, 220f, 50f);
         }   //  else
 
         Instantiate(waypoints, waypoints.transform.position, waypoints.transform.rotation);

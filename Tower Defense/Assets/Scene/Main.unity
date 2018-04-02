@@ -707,7 +707,6 @@ GameObject:
   - component: {fileID: 222072611}
   - component: {fileID: 222072610}
   - component: {fileID: 222072609}
-  - component: {fileID: 222072608}
   m_Layer: 5
   m_Name: Buy
   m_TagString: Untagged
@@ -735,18 +734,6 @@ RectTransform:
   m_AnchoredPosition: {x: 290, y: -50}
   m_SizeDelta: {x: 100, y: 75}
   m_Pivot: {x: 1, y: 0.5}
---- !u!114 &222072608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114372429396133984, guid: 6f1bb3cb43dca2249abd49764b60f559,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 222072606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &222072609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,7 +1136,7 @@ Transform:
   m_PrefabInternal: {fileID: 933550911}
   m_GameObject: {fileID: 410736163}
   m_LocalRotation: {x: 0.60876137, y: 0, z: 0, w: 0.7933534}
-  m_LocalPosition: {x: 65, y: 150, z: 10}
+  m_LocalPosition: {x: 120, y: 250, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1910,15 +1897,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4847052334196522, guid: 756a74526f226d54491dc607b9b2db81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 65
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4847052334196522, guid: 756a74526f226d54491dc607b9b2db81, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 150
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4847052334196522, guid: 756a74526f226d54491dc607b9b2db81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4847052334196522, guid: 756a74526f226d54491dc607b9b2db81, type: 2}
       propertyPath: m_LocalRotation.x

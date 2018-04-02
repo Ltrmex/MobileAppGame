@@ -297,7 +297,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\WaveSpawn.cs" />
@@ -312,6 +311,7 @@
     <Compile Include="Assets\Scripts\Turret\Turret.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\Advanced.txt" />
     <None Include="Assets\Resources\Easy.txt" />
     <None Include="Assets\Resources\Medium.txt" />
   </ItemGroup>
