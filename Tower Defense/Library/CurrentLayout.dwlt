@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 711, y: 492}
-  m_MaxSize: {x: 18006, y: 14042}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 8797
+  controlID: 16746
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,14 +131,14 @@ MonoBehaviour:
     height: 635
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 11}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 8852
+  controlID: 16747
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 92
+    y: 19
     width: 707
     height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -273,8 +273,8 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -353.5
-    m_HBaseRangeMax: 353.5
+    m_HBaseRangeMin: -683
+    m_HBaseRangeMax: 683
     m_VBaseRangeMin: -298.5
     m_VBaseRangeMax: 298.5
     m_HAllowExceedBaseRangeMin: 1
@@ -285,7 +285,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
@@ -293,25 +293,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 707
+      width: 1366
       height: 597
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 353.5, y: 298.5}
+    m_Translation: {x: 683, y: 298.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -353.5
+      x: -683
       y: -298.5
-      width: 707
+      width: 1366
       height: 597
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 707, y: 614}
+  m_LastWindowPixelSize: {x: 1366, y: 614}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -343,14 +343,14 @@ MonoBehaviour:
     height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1030.0790810422004
+  lastFramingTime: 1887.4970973423926
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 193.32698, y: 297.3336, z: 8.847679}
+    m_Target: {x: 353.5, y: 299, z: 0}
     speed: 2
-    m_Value: {x: 193.32698, y: 297.3336, z: 8.847679}
+    m_Value: {x: 353.5, y: 299, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -378,9 +378,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 641.236
+    m_Target: 594.9159
     speed: 2
-    m_Value: 641.236
+    m_Value: 594.9159
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -491,9 +491,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 863efafffe3ffaffa84efaffde5ffaff2876fafff875fefffc75feff0276feff0676feff96fbffff000000006c29000076290000
+    m_SelectedIDs: 58f0ffff
+    m_LastClickedID: -4008
+    m_ExpandedIDs: 6a84feff96fbffff00000000542900007a29000084290000b2290000c4290000e0290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -555,20 +555,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Sprites
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ltrmex\Desktop\Projects\MobileAppGame\MobileAppGame\Tower
     Defense
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2e280000
-    m_LastClickedID: 10286
-    m_ExpandedIDs: 00000000d2270000a0280000ffffff7f
+    m_SelectedIDs: e2280000
+    m_LastClickedID: 10466
+    m_ExpandedIDs: 00000000d6270000ac280000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,7 +596,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d2270000a0280000ffffff7f
+    m_ExpandedIDs: 00000000d6270000ac280000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -623,8 +623,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 9e2e00002e3100004c310000b42e0000e208feffda2c0000de2c0000bcabffff362bfaff56c50000fc30f6ff62060000c4af0000e2060000a24400002c2a0000ee2c0000000000001406f5ffdc270000c4d0ffffe0270000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 9e2e00002e3100004c310000b42e0000e208feffda2c0000de2c0000bcabffff362bfaff56c50000fc30f6ff62060000c4af0000e2060000a24400002c2a0000ee2c00001406f5ffdc270000c4d0ffffe027000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

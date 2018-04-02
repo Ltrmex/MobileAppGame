@@ -36,7 +36,7 @@ public class GenerateMap : MonoBehaviour {
     private string[] Read() {
         TextAsset bind = Resources.Load(difficulty) as TextAsset;
         string data = bind.text.Replace(Environment.NewLine, string.Empty);
-        GameObject waypoints = Resources.Load("Easy Waypoints") as GameObject; ;
+        GameObject waypoints = Resources.Load("Easy Waypoints") as GameObject;
 
         if (difficulty == "Easy") {
             start.transform.position = new Vector3(100f, 0f, 80f);
