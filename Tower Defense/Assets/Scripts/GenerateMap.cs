@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GenerateMap : MonoBehaviour {
     public GameObject[] prefabs;
-    public static string difficulty = "Medium";
+    public static string difficulty = "Easy";
     public GameObject start;
     private GameObject mainCamera;
 
