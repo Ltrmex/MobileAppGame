@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour {
     private int startHealth = 100;
     private PlayerStats playerStats;
+
     public Slider healthSlider;
     public int currentHealth;
 

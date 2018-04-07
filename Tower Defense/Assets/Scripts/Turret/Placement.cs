@@ -4,6 +4,7 @@ public class Placement : MonoBehaviour {
     public Color startColor;
     public Color hoverColor;
     public Vector3 offset;
+
     private new Renderer renderer;
     private GameObject place;
     private PlayerStats playerStats;
