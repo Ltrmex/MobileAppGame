@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 18323
+  controlID: 14845
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 18324
+  controlID: 14919
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -491,9 +491,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 72c9f5ff
-    m_LastClickedID: -669326
-    m_ExpandedIDs: 72c9f5ff74c9f5ff76c9f5ff5edbf5ff0642f9ff1c42f9ff025afcff7298fdff7698fdff0ca3fdff1cb5fdfffeb5fdff88bffdff400bffff440bffff96fbffff000000001e2a0000322a0000642a00006e2a0000782a0000d63e0000563f0000743f0000c23f0000cc3f0000fc3f0000044000008e460000cc460000d64600003a480000a6480000e8480000884a0000c64a0000d04a00001c4b00002a4b0000384b0000664b0000864b00008e4b0000a44b0000b84b0000ce4b0000dc4b0000ea4b0000124c00000e9b00002c9b0000
+    m_SelectedIDs: 54340000
+    m_LastClickedID: 13396
+    m_ExpandedIDs: b640fbffb840fbffbc40fbffc040fbffc440fbffc840fbffd040fbffda40fbffe440fbffe640fbffec40fbffee40fbfff040fbff62e0feff8a05ffff96fbffff00000000a42a0000f22a00002c2b00003e2b0000cc33000004340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -555,20 +555,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ltrmex\Desktop\Projects\MobileAppGame\MobileAppGame\Tower
     Defense
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3c280000
-    m_LastClickedID: 10300
-    m_ExpandedIDs: 00000000d6270000ffffff7f
+    m_SelectedIDs: c8280000
+    m_LastClickedID: 10440
+    m_ExpandedIDs: 00000000d8270000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,7 +596,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d6270000ffffff7f
+    m_ExpandedIDs: 00000000d8270000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -678,7 +678,7 @@ MonoBehaviour:
     width: 275
     height: 614
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 341.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 109

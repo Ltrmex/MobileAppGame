@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour {
     private PlayerStats playerStats;
-    private int cost;
+    private static int cost;
     public Text costDisplay;
 
 	// Use this for initialization
@@ -27,5 +27,17 @@ public class Shop : MonoBehaviour {
         playerStats.gold -= cost;
 
         cost = (int)(cost * 0.20) + cost;
+
+        SoldItem();
     }   //  BuyTurret()
+
+    private void SoldItem() {
+        gameObject.GetComponentInChildren<Text>().text = "SOLD";
+        gameObject.GetComponent<Image>().color = Color.red;
+        gameObject.GetComponent<Button>().interactable = false;
+    }   //  SoldItem()
+
+    public void Upgrade() {
+
+    }   // Upgrade() 
 }   //  Shop
