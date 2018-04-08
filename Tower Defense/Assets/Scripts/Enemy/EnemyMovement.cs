@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
+    public float startSpeed = 10f;
     public float speed;
     private Transform target;
     private int wavepointIndex;
 
 	// Use this for initialization
 	void Start () {
-        speed = 10f;
+        speed = startSpeed;
         wavepointIndex = 0;
         target = Waypoints.waypoints[0];
     }   //  Start ()
@@ -19,6 +20,8 @@ public class EnemyMovement : MonoBehaviour {
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
             GetNext();
+
+        speed = startSpeed;
     }   //  Update ()
 
     private void GetNext() {
@@ -32,4 +35,8 @@ public class EnemyMovement : MonoBehaviour {
         ++wavepointIndex;
         target = Waypoints.waypoints[wavepointIndex];
     }   //  GetNext()
-}
+
+    public void Slow(float percentage) {
+        speed = startSpeed * (1f - percentage);
+    }   //  Slow()
+}   //  EnemyMovement

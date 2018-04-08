@@ -8,15 +8,20 @@ using UnityEngine;
 public class Turret : MonoBehaviour {
     //  Variables
     private Transform target;   //  current target - enemy
+    private EnemyHealth targetHealth;
+    private EnemyMovement targetMovement;
 
     [Header("Attributes")]
     public float range = 15f;   //  range of the shooting & following
     public float fireRate = 1f; //  fire one bullet each second
     private float fireCountdown = 0f;   //  shooting countdown
 
+    [Header("Laser")]
     public bool shootLaser = false;
     public LineRenderer lineRenderer;
     public ParticleSystem laserEffect;
+    public float damageOverTime = 25;
+    public float movementDebuff = .5f;
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";   //  tag reference
@@ -49,8 +54,12 @@ public class Turret : MonoBehaviour {
         }   //  foreach
 
         //  If found enemy and within range
-        if (nearestEnemy != null && shortestDistance <= range)
+        if (nearestEnemy != null && shortestDistance <= range) { 
             target = nearestEnemy.transform;    //  set this enemy as a target
+
+            targetHealth = nearestEnemy.GetComponent<EnemyHealth>();
+            targetMovement = nearestEnemy.GetComponent<EnemyMovement>();
+        }   //  if
         else
             target = null;  //  else no target
 
@@ -87,6 +96,11 @@ public class Turret : MonoBehaviour {
     }   //  Update()
 
     private void Laser() {
+        //  Damage
+        targetHealth.TakeDamage(damageOverTime * Time.deltaTime);
+        targetMovement.Slow(movementDebuff);
+
+        //  Graphics
         if (!lineRenderer.enabled) {
             lineRenderer.enabled = true;
             laserEffect.Play();

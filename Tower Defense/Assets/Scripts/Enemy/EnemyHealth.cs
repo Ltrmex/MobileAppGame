@@ -2,11 +2,12 @@
 using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour {
-    private int startHealth = 100;
+    private float startHealth = 100;
     private PlayerStats playerStats;
+    private int coins = 20;
 
     public Slider healthSlider;
-    public int currentHealth;
+    public float currentHealth;
 
     // Use this for initialization
     void Start () {
@@ -14,7 +15,7 @@ public class EnemyHealth : MonoBehaviour {
         playerStats = GameObject.FindGameObjectWithTag("Manager").GetComponent<PlayerStats>();
 	}   //  Start()
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(float damage) {
         currentHealth -= damage;
         
         if (currentHealth <= 0)
@@ -22,7 +23,7 @@ public class EnemyHealth : MonoBehaviour {
     }   //  TakeDamage
 
     void Death() {
-        playerStats.gold += 20;
+        playerStats.gold += coins;
         Destroy(gameObject);
     }   //  Death()
 

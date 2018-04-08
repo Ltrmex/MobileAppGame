@@ -425,6 +425,7 @@ MonoBehaviour:
   shootLaser: 1
   lineRenderer: {fileID: 120691661107122576}
   laserEffect: {fileID: 198021548038146192}
+  damageOverTime: 25
   enemyTag: Enemy
   gun: {fileID: 4911374485183040}
   turnSpeed: 10
