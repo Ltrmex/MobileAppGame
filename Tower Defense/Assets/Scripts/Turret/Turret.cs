@@ -16,6 +16,7 @@ public class Turret : MonoBehaviour {
 
     public bool shootLaser = false;
     public LineRenderer lineRenderer;
+    public ParticleSystem laserEffect;
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";   //  tag reference
@@ -59,8 +60,10 @@ public class Turret : MonoBehaviour {
     void Update() {
         if (target == null) { //  if no target then return
             if (shootLaser) {
-                if (lineRenderer.enabled)
+                if (lineRenderer.enabled) {
                     lineRenderer.enabled = false;
+                    laserEffect.Stop();
+                }   //  if
             }   //  inner if
 
             return;
@@ -84,11 +87,21 @@ public class Turret : MonoBehaviour {
     }   //  Update()
 
     private void Laser() {
-        if (!lineRenderer.enabled)
+        if (!lineRenderer.enabled) {
             lineRenderer.enabled = true;
+            laserEffect.Play();
+        }   //  if
+            
 
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
+
+        Vector3 direction = firePoint.position - target.position;
+
+        laserEffect.transform.position = target.position + direction.normalized;
+
+        laserEffect.transform.rotation = Quaternion.LookRotation(direction);
+
     }   //  Laser()
 
     private void LockOn() {

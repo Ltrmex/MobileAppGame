@@ -24,12 +24,12 @@ public class GenerateMap : MonoBehaviour {
             char[] newWall = mapData[y].ToCharArray();
 
             for (int x = 0; x < xSize; x++) {
-                PlaceWall(newWall[x].ToString(), x, y);
+                Place(newWall[x].ToString(), x, y);
             }
         }
     }   //  GenerateMap()
 
-    private void PlaceWall(string type, int x, int y) {
+    private void Place(string type, int x, int y) {
         int index = int.Parse(type);
 
         GameObject wall = Instantiate(prefabs[index]) as GameObject;
