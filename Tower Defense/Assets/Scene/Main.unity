@@ -442,7 +442,6 @@ GameObject:
   m_Component:
   - component: {fileID: 188782221}
   - component: {fileID: 188782222}
-  - component: {fileID: 188782223}
   m_Layer: 5
   m_Name: Game Over
   m_TagString: Untagged
@@ -551,13 +550,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!81 &188782223
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 188782220}
-  m_Enabled: 1
 --- !u!1 &201077352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1158,8 @@ MonoBehaviour:
   turrets: 0
   beams: 0
   gameOver: {fileID: 188782220}
-  canvas: {fileID: 1329998425}
+  buttons: {fileID: 287212850}
+  tabs: {fileID: 2125509108}
 --- !u!114 &970104543
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,12 +13,15 @@ public class PlayerStats : MonoBehaviour {
     public int beams;
     public static int lives;
     public GameObject gameOver;
-    public GameObject canvas;
+    public GameObject buttons;
+    public GameObject tabs;
 
     // Use this for initialization
     void Start () {
-        canvas.SetActive(true);
         gameOver.SetActive(false);
+        buttons.SetActive(true);
+        tabs.SetActive(true);
+
         gold = 200;
         turrets = 2;
         beams = 1;
@@ -34,8 +37,9 @@ public class PlayerStats : MonoBehaviour {
         beamsDisplay.text = "Beams: " + beams;
 
         if (lives <= 0) {
-            canvas.SetActive(false);
             gameOver.SetActive(true);
+            buttons.SetActive(false);
+            tabs.SetActive(false);
         }   //  if
 
     }   //  Update()

@@ -23,12 +23,10 @@ public class Placement : MonoBehaviour {
 
         if (buildManager.GetTurret() == null)
             return;
-        else if (playerStats.turrets <= 0 && buildManager.GetTurret().tag == "Turret") {
+        else if (playerStats.turrets <= 0 && buildManager.GetTurret().tag == "Turret")
             return;
-        }   //  else if
-        else if (playerStats.beams <= 0 && buildManager.GetTurret().tag == "Beam") {
+        else if (playerStats.beams <= 0 && buildManager.GetTurret().tag == "Beam")
             return;
-        }   //  else if
 
         renderer.material.color = hoverColor;
     }   //  OnMouseEnter()
