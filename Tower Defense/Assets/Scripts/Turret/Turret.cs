@@ -2,6 +2,7 @@
 Name: Maciej Majchrzak
 Code Adapted From: https://github.com/Brackeys/Tower-Defense-Tutorial
 */
+using System;
 using UnityEngine;
 
 public class Turret : MonoBehaviour {
@@ -12,6 +13,9 @@ public class Turret : MonoBehaviour {
     public float range = 15f;   //  range of the shooting & following
     public float fireRate = 1f; //  fire one bullet each second
     private float fireCountdown = 0f;   //  shooting countdown
+
+    public bool shootLaser = false;
+    public LineRenderer lineRenderer;
 
     [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";   //  tag reference
@@ -53,9 +57,41 @@ public class Turret : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (target == null) //  if no target then return
-            return;
+        if (target == null) { //  if no target then return
+            if (shootLaser) {
+                if (lineRenderer.enabled)
+                    lineRenderer.enabled = false;
+            }   //  inner if
 
+            return;
+        }   //  if
+
+        //  Lock on
+        LockOn();
+
+        if (shootLaser) { 
+            Laser();
+        }   //  if
+        else { 
+            //  If time to shoot
+            if (fireCountdown <= 0f) {
+                Shoot();    //  then shoot
+                fireCountdown = 1f / fireRate;  //  set fireCountdown
+            }   //  if
+
+            fireCountdown -= Time.deltaTime;    //  countdown fireCountdown
+        }   //  else
+    }   //  Update()
+
+    private void Laser() {
+        if (!lineRenderer.enabled)
+            lineRenderer.enabled = true;
+
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
+    }   //  Laser()
+
+    private void LockOn() {
         //  Target lock on
         Vector3 direction = target.position - transform.position;   //  direction to point at, direction from one point to another point
         Quaternion lookRotation = Quaternion.LookRotation(direction);   //  turn rotation
@@ -66,15 +102,7 @@ public class Turret : MonoBehaviour {
         //  Rotate head of the turret
         gun.rotation = Quaternion.Euler(0f, rotation.y, 0f);    //   around y axis
 
-        //  If time to shoot
-        if (fireCountdown <= 0f) {
-            Shoot();    //  then shoot
-            fireCountdown = 1f / fireRate;  //  set fireCountdown
-        }   //  if
-
-        fireCountdown -= Time.deltaTime;    //  countdown fireCountdown
-
-    }   //  Update()
+    }   //  LockOn()
 
     void Shoot() {
         //  Variables

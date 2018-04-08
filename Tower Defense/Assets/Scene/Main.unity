@@ -1166,6 +1166,7 @@ MonoBehaviour:
   turrets: 0
   beams: 0
   gameOver: {fileID: 188782220}
+  canvas: {fileID: 1329998425}
 --- !u!114 &970104543
 MonoBehaviour:
   m_ObjectHideFlags: 0
