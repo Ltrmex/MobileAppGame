@@ -17,6 +17,10 @@ public class Placement : MonoBehaviour {
         playerStats = GameObject.FindGameObjectWithTag("Manager").GetComponent<PlayerStats>();
     }   //  Start()
 
+    public Vector3 GetBuildPosition() {
+        return transform.position + offset;
+    }   //  GetBuildPosition()
+
     private void OnMouseEnter() {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
@@ -39,11 +43,8 @@ public class Placement : MonoBehaviour {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (buildManager.GetTurret() == null)
-            return;
-
         if (place != null) {
-            Debug.Log("Already Occupied!");
+            buildManager.SelectTower(this);
             return;
         }   //  if
         else if (playerStats.turrets <= 0 && buildManager.GetTurret().tag == "Turret") {
@@ -54,6 +55,9 @@ public class Placement : MonoBehaviour {
             Debug.Log("Not Enough Beams Bought!");
             return;
         }   //  else if
+
+        if (buildManager.GetTurret() == null)
+            return;
 
         if (buildManager.GetTurret().tag == "Turret")
             --playerStats.turrets;

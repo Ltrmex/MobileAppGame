@@ -25,12 +25,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Turret_GunMetal
-    second: {fileID: 2100002, guid: c4b011b7d2a50524588960b451b1aee9, type: 3}
+    second: {fileID: 2100000, guid: eb8271da30278c449903e3eba1ec5b5f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Turret_Metal
-    second: {fileID: 2100000, guid: 97cc6aff9ff91914dabe2ac1d5541314, type: 2}
+    second: {fileID: 2100000, guid: 372db43a85c40504bb2e90cf3f4e3553, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

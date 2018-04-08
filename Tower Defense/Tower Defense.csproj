@@ -310,6 +310,7 @@
     <Compile Include="Assets\Scripts\Turret\Bullet.cs" />
     <Compile Include="Assets\Scripts\Turret\Place.cs" />
     <Compile Include="Assets\Scripts\Turret\Placement.cs" />
+    <Compile Include="Assets\Scripts\Turret\TowerUI.cs" />
     <Compile Include="Assets\Scripts\Turret\Turret.cs" />
   </ItemGroup>
   <ItemGroup>
