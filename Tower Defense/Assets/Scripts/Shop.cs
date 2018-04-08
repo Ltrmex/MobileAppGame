@@ -3,13 +3,12 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour {
     private PlayerStats playerStats;
-    private static int cost;
+    public int cost;
     public Text costDisplay;
 
 	// Use this for initialization
 	void Start () {
         playerStats = GameObject.FindGameObjectWithTag("Manager").GetComponent<PlayerStats>();
-        cost = 200;
     }   //  Start()
 	
 	// Update is called once per frame
@@ -18,18 +17,26 @@ public class Shop : MonoBehaviour {
     }   //  Update()
 
     public void BuyTurret() {
+        playerStats.turrets = Buy(playerStats.turrets);
+    }   //  BuyTurret()
+
+    public void BuyBeam() {
+        playerStats.beams = Buy(playerStats.beams);
+    }   //  BuyBeam()
+
+    private int Buy(int counter) {
         if (cost > playerStats.gold) {
             Debug.Log("Not Enough Gold!");
-            return;
+            return counter;
         }   //  if
 
-        ++playerStats.turrets;
+        ++counter;
         playerStats.gold -= cost;
 
-        cost = (int)(cost * 0.20) + cost;
-
         SoldItem();
-    }   //  BuyTurret()
+
+        return counter;
+    }   //  Buy()
 
     private void SoldItem() {
         gameObject.GetComponentInChildren<Text>().text = "SOLD";
@@ -37,7 +44,4 @@ public class Shop : MonoBehaviour {
         gameObject.GetComponent<Button>().interactable = false;
     }   //  SoldItem()
 
-    public void Upgrade() {
-
-    }   // Upgrade() 
 }   //  Shop

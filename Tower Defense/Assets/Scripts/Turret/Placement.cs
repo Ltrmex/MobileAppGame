@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Placement : MonoBehaviour {
     public Color startColor;
@@ -17,6 +18,9 @@ public class Placement : MonoBehaviour {
     }   //  Start()
 
     private void OnMouseEnter() {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         if (buildManager.GetTurret() == null)
             return;
         else if (playerStats.turrets <= 0 && buildManager.GetTurret().tag == "Turret") {
@@ -34,6 +38,9 @@ public class Placement : MonoBehaviour {
     }   //  OnMouseExit()
 
     private void OnMouseDown() {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         if (buildManager.GetTurret() == null)
             return;
 
