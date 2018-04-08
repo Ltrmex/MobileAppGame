@@ -12,15 +12,15 @@ public class Turret : MonoBehaviour {
     private EnemyMovement targetMovement;
 
     [Header("Attributes")]
-    public float range = 15f;   //  range of the shooting & following
-    public float fireRate = 1f; //  fire one bullet each second
+    public static float range = 15f;   //  range of the shooting & following
+    public static float fireRate = 1f; //  fire one bullet each second
     private float fireCountdown = 0f;   //  shooting countdown
 
     [Header("Laser")]
     public bool shootLaser = false;
     public LineRenderer lineRenderer;
     public ParticleSystem laserEffect;
-    public float damageOverTime = 25;
+    public static float damageOverTime = 25;
     public float movementDebuff = .5f;
 
     [Header("Unity Setup Fields")]
