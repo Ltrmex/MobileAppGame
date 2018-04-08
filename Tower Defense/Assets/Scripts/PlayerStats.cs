@@ -6,10 +6,12 @@ public class PlayerStats : MonoBehaviour {
     public Text turretsDisplay;
     public Text difficultyDisplay;
     public Text livesDisplay;
+    public Text beamsDisplay;
 
     public int gold;
     public int turrets;
-    public static int lives = 5;
+    public int beams;
+    public static int lives;
     public GameObject gameOver;
     
     // Use this for initialization
@@ -17,6 +19,7 @@ public class PlayerStats : MonoBehaviour {
         gameOver.SetActive(false);
         gold = 200;
         turrets = 2;
+        beams = 1;
         lives = 5;
     }   //  Start()
 	
@@ -26,6 +29,7 @@ public class PlayerStats : MonoBehaviour {
         turretsDisplay.text = "Turrets: " + turrets;
         difficultyDisplay.text = "Difficulty: " + GenerateMap.difficulty;
         livesDisplay.text = "Lives: " + lives;
+        beamsDisplay.text = "Beams: " + beams;
 
         if (lives <= 0) {
             gameOver.SetActive(true);

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4282242912083300}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365996511793358}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.08, y: 5, z: 69.85}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4280030275004592}
@@ -268,8 +268,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d8935d85bb45a794b9c29f87231d2579, type: 3}
-  - {fileID: 2100002, guid: d8935d85bb45a794b9c29f87231d2579, type: 3}
+  - {fileID: 2100000, guid: 372db43a85c40504bb2e90cf3f4e3553, type: 2}
+  - {fileID: 2100000, guid: 372db43a85c40504bb2e90cf3f4e3553, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -303,9 +303,9 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100008, guid: eb8fb6b96e9fad947a347f62eda319e5, type: 3}
-  - {fileID: 2100004, guid: eb8fb6b96e9fad947a347f62eda319e5, type: 3}
-  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 372db43a85c40504bb2e90cf3f4e3553, type: 2}
+  - {fileID: 2100000, guid: 372db43a85c40504bb2e90cf3f4e3553, type: 2}
+  - {fileID: 2100000, guid: 372db43a85c40504bb2e90cf3f4e3553, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Builder : MonoBehaviour {
     public static Builder instance; //  singleton
     private GameObject build;
-    public GameObject prefab;
+    public GameObject turretPrefab;
+    public GameObject beamPrefab;
 
     private void Awake() {
         if(instance != null) {
@@ -16,13 +15,12 @@ public class Builder : MonoBehaviour {
         instance = this;
     }   //  Awake()
 
-    private void Start() {
-        build = prefab;
-    }   //  Start()
-
     public GameObject GetTurret() {
-
         return build;
     }   //  GetTurret()
+
+    public void SetTurret(GameObject tower) {
+        build = tower;
+    }   //  SetTurret()
 
 }   //  Builder

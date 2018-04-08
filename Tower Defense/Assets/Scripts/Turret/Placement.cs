@@ -7,14 +7,25 @@ public class Placement : MonoBehaviour {
 
     private new Renderer renderer;
     private GameObject place;
-    private PlayerStats playerStats;
+    Builder buildManager;
+    PlayerStats playerStats;
 
-    private void Start() {
+    void Start() {
         renderer = GetComponent<Renderer>();
+        buildManager = Builder.instance;
         playerStats = GameObject.FindGameObjectWithTag("Manager").GetComponent<PlayerStats>();
     }   //  Start()
 
     private void OnMouseEnter() {
+        if (buildManager.GetTurret() == null)
+            return;
+        else if (playerStats.turrets <= 0 && buildManager.GetTurret().tag == "Turret") {
+            return;
+        }   //  else if
+        else if (playerStats.beams <= 0 && buildManager.GetTurret().tag == "Beam") {
+            return;
+        }   //  else if
+
         renderer.material.color = hoverColor;
     }   //  OnMouseEnter()
 
@@ -23,17 +34,29 @@ public class Placement : MonoBehaviour {
     }   //  OnMouseExit()
 
     private void OnMouseDown() {
+        if (buildManager.GetTurret() == null)
+            return;
+
         if (place != null) {
             Debug.Log("Already Occupied!");
             return;
         }   //  if
-        else if (playerStats.turrets <= 0) {
+        else if (playerStats.turrets <= 0 && buildManager.GetTurret().tag == "Turret") {
             Debug.Log("Not Enough Turrets Bought!");
             return;
         }   //  else if
+        else if (playerStats.beams <= 0 && buildManager.GetTurret().tag == "Beam") {
+            Debug.Log("Not Enough Beams Bought!");
+            return;
+        }   //  else if
 
-        GameObject build = Builder.instance.GetTurret();
+        if (buildManager.GetTurret().tag == "Turret")
+            --playerStats.turrets;
+        else if (buildManager.GetTurret().tag == "Beam")
+            --playerStats.beams;
+
+        GameObject build = buildManager.GetTurret();
         place = (GameObject)Instantiate(build, transform.position + offset,transform.rotation);
-        --playerStats.turrets;
+        
     }   //  OnMouseDown()
 }   //  Placement
