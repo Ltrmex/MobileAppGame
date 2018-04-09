@@ -305,6 +305,7 @@
     <Compile Include="Assets\Scripts\Environment\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Environment\Shop.cs" />
     <Compile Include="Assets\Scripts\Environment\SoundController.cs" />
+    <Compile Include="Assets\Scripts\Highscores.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Turret\Builder.cs" />
     <Compile Include="Assets\Scripts\Turret\Bullet.cs" />
@@ -312,6 +313,7 @@
     <Compile Include="Assets\Scripts\Turret\Placement.cs" />
     <Compile Include="Assets\Scripts\Turret\TowerUI.cs" />
     <Compile Include="Assets\Scripts\Turret\Turret.cs" />
+    <Compile Include="Assets\Scripts\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Advanced.txt" />
