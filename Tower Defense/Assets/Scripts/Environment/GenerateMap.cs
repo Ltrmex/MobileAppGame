@@ -51,7 +51,7 @@ public class GenerateMap : MonoBehaviour {
             end.transform.position = new Vector3(0f, 0f, 10f);
 
             enemyHealth.startHealth = 100;
-            PlayerStats.lives = 1;
+            PlayerStats.lives = 20;
 
             mainCamera.transform.position = new Vector3(50f, 100f, 20f);
         }   //  if

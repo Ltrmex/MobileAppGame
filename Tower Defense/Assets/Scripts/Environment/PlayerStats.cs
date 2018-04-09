@@ -35,7 +35,7 @@ public class PlayerStats : MonoBehaviour {
         gold = 200;
         turrets = 2;
         beams = 1;
-        userMessage = "User Messages!";
+        userMessage = "S - Open Tab, T - Place Turret, B - Place Beam";
         playerName = "Player 1";
         isClicked = false;
     }   //  Start()

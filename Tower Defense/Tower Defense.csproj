@@ -297,8 +297,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Data.cs" />
-    <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\WaveSpawn.cs" />
@@ -307,15 +305,17 @@
     <Compile Include="Assets\Scripts\Environment\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Environment\Shop.cs" />
     <Compile Include="Assets\Scripts\Environment\SoundController.cs" />
-    <Compile Include="Assets\Scripts\Highscores.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Menu\Data.cs" />
+    <Compile Include="Assets\Scripts\Menu\DataController.cs" />
+    <Compile Include="Assets\Scripts\Menu\Highscores.cs" />
+    <Compile Include="Assets\Scripts\Menu\Menu.cs" />
+    <Compile Include="Assets\Scripts\Menu\User.cs" />
     <Compile Include="Assets\Scripts\Turret\Builder.cs" />
     <Compile Include="Assets\Scripts\Turret\Bullet.cs" />
     <Compile Include="Assets\Scripts\Turret\Place.cs" />
     <Compile Include="Assets\Scripts\Turret\Placement.cs" />
     <Compile Include="Assets\Scripts\Turret\TowerUI.cs" />
     <Compile Include="Assets\Scripts\Turret\Turret.cs" />
-    <Compile Include="Assets\Scripts\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Advanced.txt" />
