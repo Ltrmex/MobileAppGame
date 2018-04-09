@@ -2,12 +2,12 @@
 using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour {
-    private float startHealth = 100;
     private PlayerStats playerStats;
     private int coins = 20;
 
     public Slider healthSlider;
     public float currentHealth;
+    public float startHealth = 100;
 
     // Use this for initialization
     void Start () {

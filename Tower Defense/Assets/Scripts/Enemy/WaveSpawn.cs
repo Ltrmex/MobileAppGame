@@ -25,12 +25,22 @@ public class WaveSpawn : MonoBehaviour {
         yield return new WaitForSeconds(startWait);
         
         while (true) {
-            for (int i = 0; i < hazardCount; i++) {
+            for (int i = 1; i <= Random.Range(1, 10); i++) {
                 Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
                 yield return new WaitForSeconds(spawnWait);
             }   //  for
             yield return new WaitForSeconds(waveWait);
             ++waveNumber;
+
+            if (waveNumber % 5 == 0) {
+                enemy.GetComponent<EnemyHealth>().startHealth += 20;
+
+                if(!(enemy.GetComponent<EnemyMovement>().speed >= 15f))
+                    enemy.GetComponent<EnemyMovement>().speed += 0.5f;
+
+                if(!(waveWait <= 5))
+                    waveWait -= 0.5f;
+            }   //  if
         }   //  while
     }   //   SpawnWave()
 }   //  WaveSpawn

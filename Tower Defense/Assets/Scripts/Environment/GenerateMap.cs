@@ -6,11 +6,14 @@ public class GenerateMap : MonoBehaviour {
     public static string difficulty = "Easy";
     public GameObject start;
     public GameObject end;
+    public GameObject enemy;
+    private EnemyHealth enemyHealth;
     private GameObject mainCamera;
 
     // Use this for initialization
     void Start() {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        enemyHealth = enemy.GetComponent<EnemyHealth>();
         CreateMap();
     }   //  Start ()
 
@@ -45,6 +48,8 @@ public class GenerateMap : MonoBehaviour {
             start.transform.position = new Vector3(100f, 0f, 80f);
             end.transform.position = new Vector3(0f, 0f, 10f);
 
+            enemyHealth.startHealth = 100;
+
             mainCamera.transform.position = new Vector3(50f, 100f, 20f);
         }   //  if
         else if (difficulty == "Medium") {
@@ -53,6 +58,8 @@ public class GenerateMap : MonoBehaviour {
             start.transform.position = new Vector3(130f, 0f, 140f);
             end.transform.position = new Vector3(10f, 0f, 0f);
 
+            enemyHealth.startHealth = 150;
+
             mainCamera.transform.position = new Vector3(70f, 150f, 30f);
         }   //  else if
         else {
@@ -60,6 +67,8 @@ public class GenerateMap : MonoBehaviour {
 
             start.transform.position = new Vector3(0f, 0f, 250f);
             end.transform.position = new Vector3(240f, 0f, 10f);
+
+            enemyHealth.startHealth = 200;
 
             mainCamera.transform.position = new Vector3(120f, 220f, 50f);
         }   //  else
