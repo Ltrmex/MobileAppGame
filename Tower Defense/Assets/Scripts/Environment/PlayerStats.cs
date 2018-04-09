@@ -18,6 +18,7 @@ public class PlayerStats : MonoBehaviour {
     public GameObject gameOver;
     public GameObject buttons;
     public GameObject tabs;
+    public GameObject pauseMenu;
 
     private DataController dataController;
     private WaveSpawn waveSpawn;
@@ -25,6 +26,8 @@ public class PlayerStats : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        Time.timeScale = 1;
+
         gameOver.SetActive(false);
         buttons.SetActive(true);
         tabs.SetActive(true);
@@ -35,13 +38,16 @@ public class PlayerStats : MonoBehaviour {
         gold = 200;
         turrets = 2;
         beams = 1;
-        userMessage = "S - Open Tab, T - Place Turret, B - Place Beam";
+        userMessage = "Click: S - Open Tab, T - Place Turret, B - Place Beam. Keyboard: ESC - Pause";
         playerName = "Player 1";
         isClicked = false;
     }   //  Start()
 
     // Update is called once per frame
     void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Pause();
+
         goldDisplay.text = "Gold: " + gold;
         turretsDisplay.text = "Turrets: " + turrets;
         difficultyDisplay.text = "Difficulty: " + GenerateMap.difficulty;
@@ -70,4 +76,21 @@ public class PlayerStats : MonoBehaviour {
         buttons.SetActive(false);
         tabs.SetActive(false);
     }   //  GameOver()
+
+    void Pause() {
+        
+        if (Time.timeScale == 1) {
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }   //  inner if
+
+        else if (Time.timeScale == 0) {
+            Time.timeScale = 1;
+            pauseMenu.SetActive(false);
+        }   //  inner else
+    }   //  Pause()
+
+    public void Quit() {
+        Application.Quit();
+    }   //  Quit()
 }   //  PlayerStats
