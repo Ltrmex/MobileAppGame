@@ -11,7 +11,7 @@ public class WaveSpawn : MonoBehaviour {
     public float startWait;
     public float waveWait;
     public Text waveDisplay;
-    private int waveNumber;
+    public int waveNumber;
 
     private void Start() {
         StartCoroutine("SpawnWave");
@@ -36,10 +36,11 @@ public class WaveSpawn : MonoBehaviour {
             if (waveNumber % 5 == 0) {
                 enemy.GetComponent<EnemyHealth>().startHealth += 20;
 
-                if(!(enemy.GetComponent<EnemyMovement>().speed >= 15f))
+                if (!(enemy.GetComponent<EnemyMovement>().speed >= 25f)) {
+                    waveWait -= .2f;
                     enemy.GetComponent<EnemyMovement>().speed += 0.5f;
-
-                if(!(waveWait <= 5))
+                }
+                if (!(waveWait <= 5))
                     waveWait -= 0.5f;
             }   //  if
         }   //  while
