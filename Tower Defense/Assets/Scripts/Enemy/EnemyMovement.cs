@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//  CODE ADAPTED FROM: https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
+
 public class EnemyMovement : MonoBehaviour {
     public float startSpeed = 5f;
     public float speed;
@@ -28,7 +30,7 @@ public class EnemyMovement : MonoBehaviour {
         if (wavepointIndex >= Waypoints.waypoints.Length - 1) { 
             Destroy(gameObject);
             --PlayerStats.lives;
-            Debug.Log("Lives left: " + PlayerStats.lives);
+            PlayerStats.userMessage = "Lives left: " + PlayerStats.lives;
             return;
         }   //  if
 

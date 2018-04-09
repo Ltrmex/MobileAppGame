@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//  CODE ADAPTED FROM: https://www.youtube.com/watch?v=82Mn8v55nr0
+
 public class SoundController : MonoBehaviour {
     private static SoundController instance = null;
 

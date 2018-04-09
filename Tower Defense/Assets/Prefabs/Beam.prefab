@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 1169517634332444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17, y: 17, z: 17}
+  m_LocalScale: {x: 14, y: 14, z: 14}
   m_Children:
   - {fileID: 4925962668124610}
   m_Father: {fileID: 4882978410211192}
@@ -420,12 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a0cfd4ab47e1f49b2d9ddc3233564e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 25
-  fireRate: 1
   shootLaser: 1
   lineRenderer: {fileID: 120691661107122576}
   laserEffect: {fileID: 198021548038146192}
-  damageOverTime: 25
   movementDebuff: 0.5
   enemyTag: Enemy
   gun: {fileID: 4911374485183040}

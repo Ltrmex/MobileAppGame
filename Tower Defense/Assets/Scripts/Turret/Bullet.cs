@@ -1,8 +1,6 @@
-﻿/*
-Name: Maciej Majchrzak
-Code Adapted From: https://github.com/Brackeys/Tower-Defense-Tutorial
-*/
-using UnityEngine;
+﻿using UnityEngine;
+
+//  CODE ADAPTED FROM: https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
 
 public class Bullet : MonoBehaviour {
     //  Variables

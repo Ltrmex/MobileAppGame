@@ -7,10 +7,12 @@ public class PlayerStats : MonoBehaviour {
     public Text difficultyDisplay;
     public Text livesDisplay;
     public Text beamsDisplay;
+    public Text userMessageDisplay;
 
     public int gold;
     public int turrets;
     public int beams;
+    public static string userMessage;
     public static int lives;
     public GameObject gameOver;
     public GameObject buttons;
@@ -26,6 +28,7 @@ public class PlayerStats : MonoBehaviour {
         turrets = 2;
         beams = 1;
         lives = 5;
+        userMessage = "User Messages!";
     }   //  Start()
 	
 	// Update is called once per frame
@@ -35,6 +38,7 @@ public class PlayerStats : MonoBehaviour {
         difficultyDisplay.text = "Difficulty: " + GenerateMap.difficulty;
         livesDisplay.text = "Lives: " + lives;
         beamsDisplay.text = "Beams: " + beams;
+        userMessageDisplay.text = "" + userMessage;
 
         if (lives <= 0) {
             gameOver.SetActive(true);
@@ -43,4 +47,5 @@ public class PlayerStats : MonoBehaviour {
         }   //  if
 
     }   //  Update()
+
 }   //  PlayerStats

@@ -1,9 +1,6 @@
-﻿/*
-Name: Maciej Majchrzak
-Code Adapted From: https://github.com/Brackeys/Tower-Defense-Tutorial
-*/
-using System;
-using UnityEngine;
+﻿using UnityEngine;
+
+//  CODE ADAPTED FROM: https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
 
 public class Turret : MonoBehaviour {
     //  Variables
@@ -12,7 +9,7 @@ public class Turret : MonoBehaviour {
     private EnemyMovement targetMovement;
 
     [Header("Attributes")]
-    public static float range = 15f;   //  range of the shooting & following
+    public static float range = 20f;   //  range of the shooting & following
     public static float fireRate = 1f; //  fire one bullet each second
     private float fireCountdown = 0f;   //  shooting countdown
 

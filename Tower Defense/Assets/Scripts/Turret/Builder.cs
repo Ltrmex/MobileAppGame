@@ -1,5 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+
+//  CODE ADAPTED FROM: https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
 
 public class Builder : MonoBehaviour {
     private GameObject build;
@@ -11,7 +12,7 @@ public class Builder : MonoBehaviour {
 
     private void Awake() {
         if(instance != null) {
-            Debug.Log("Already defined");
+            PlayerStats.userMessage = "Already defined";
             return;
         }   //  if
 

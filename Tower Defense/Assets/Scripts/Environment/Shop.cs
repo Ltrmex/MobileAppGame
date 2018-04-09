@@ -36,7 +36,7 @@ public class Shop : MonoBehaviour {
 
     public void Upgrade() {
         if (rangeCost > playerStats.gold) {
-            Debug.Log("Not Enough Gold!");
+            PlayerStats.userMessage = "Not Enough Gold!";
             return;
         }   //  if
 
@@ -51,7 +51,7 @@ public class Shop : MonoBehaviour {
 
     private int Buy(int counter) {
         if (cost > playerStats.gold) {
-            Debug.Log("Not Enough Gold!");
+            PlayerStats.userMessage = "Not Enough Gold!";
             return counter;
         }   //  if
 
@@ -65,7 +65,7 @@ public class Shop : MonoBehaviour {
 
     private float Upgrade(float num, string s) {
         if (upgradeCost > playerStats.gold) {
-            Debug.Log("Not Enough Gold!");
+            PlayerStats.userMessage = "Not Enough Gold!";
             return num;
         }   //  if
 

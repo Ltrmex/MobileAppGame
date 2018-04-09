@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
+//  CODE ADAPTED FROM: https://www.youtube.com/watch?v=p3lAmkxTUz8
+
 public class GenerateMap : MonoBehaviour {
     public GameObject[] prefabs;
     public static string difficulty = "Easy";
@@ -49,6 +51,7 @@ public class GenerateMap : MonoBehaviour {
             end.transform.position = new Vector3(0f, 0f, 10f);
 
             enemyHealth.startHealth = 100;
+            PlayerStats.lives = 20;
 
             mainCamera.transform.position = new Vector3(50f, 100f, 20f);
         }   //  if
@@ -59,6 +62,7 @@ public class GenerateMap : MonoBehaviour {
             end.transform.position = new Vector3(10f, 0f, 0f);
 
             enemyHealth.startHealth = 150;
+            PlayerStats.lives = 15;
 
             mainCamera.transform.position = new Vector3(70f, 150f, 30f);
         }   //  else if
@@ -69,6 +73,7 @@ public class GenerateMap : MonoBehaviour {
             end.transform.position = new Vector3(240f, 0f, 10f);
 
             enemyHealth.startHealth = 200;
+            PlayerStats.lives = 10;
 
             mainCamera.transform.position = new Vector3(120f, 220f, 50f);
         }   //  else

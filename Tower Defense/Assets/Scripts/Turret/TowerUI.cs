@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//  CODE ADAPTED FROM: https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
+
 public class TowerUI : MonoBehaviour {
     private Placement target;
     public GameObject ui;

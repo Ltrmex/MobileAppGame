@@ -2,10 +2,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+//  CODE ADAPTED FROM: https://unity3d.com/learn/tutorials/projects/space-shooter/spawning-waves
+
 public class WaveSpawn : MonoBehaviour {
     public Transform spawnPoint;
     public GameObject enemy;
-    public int hazardCount;
     public float spawnWait;
     public float startWait;
     public float waveWait;

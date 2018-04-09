@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
+//  CODE ADAPTED FROM: https://www.youtube.com/playlist?list=PLPV2KyIb3jR4u5jX8za5iU1cqnQPmbzG0
+
 public class Placement : MonoBehaviour {
     public Color startColor;
     public Color hoverColor;
@@ -48,11 +50,11 @@ public class Placement : MonoBehaviour {
             return;
         }   //  if
         else if (playerStats.turrets <= 0 && buildManager.GetTurret().tag == "Turret") {
-            Debug.Log("Not Enough Turrets Bought!");
+            PlayerStats.userMessage = "Not Enough Turrets Bought!";
             return;
         }   //  else if
         else if (playerStats.beams <= 0 && buildManager.GetTurret().tag == "Beam") {
-            Debug.Log("Not Enough Beams Bought!");
+            PlayerStats.userMessage = "Not Enough Beams Bought!";
             return;
         }   //  else if
 

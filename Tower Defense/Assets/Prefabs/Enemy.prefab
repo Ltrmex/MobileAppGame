@@ -1269,7 +1269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fad24fd6cec86e40ace196614bc00a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  startSpeed: 5
+  speed: 5
 --- !u!114 &114789844423144518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1310,6 +1311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 114911622865232546}
   currentHealth: 0
+  startHealth: 100
 --- !u!114 &114847484654779758
 MonoBehaviour:
   m_ObjectHideFlags: 1
