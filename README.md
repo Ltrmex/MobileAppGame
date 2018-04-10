@@ -1,4 +1,5 @@
 # Mobile Applications Development 2 Project
+## NOTE: Notice that 'Projects' github tab was used for development of this app 
 
 ### Instructions
 > The application can be a game (UNITY is acceptable with C# scripting) or an interactive information app. What the app does is up 
