@@ -31,7 +31,51 @@ to you. You can have a single page app, or one with many pages – that is a cho
         - Or at the top left corner of the Unity editor go to File->Build & Run
 * From Windows Store:
     - Go to [Get Endless Nightmare App](https://unity3d.com/get-unity/download), install and launch the game
-    
+
+### Endless Nightmare - App Description
+* It is a basic Tower Defense game where player is able to place towers which will shoot infinite waves of enemies
+
+### Endless Nightmare - App Functionality
+* Main menu with start, highscores and quit options
+    - When start is pressed player is able to choose from three different difficulties which after game begins
+        - Easy
+        - Medium
+        - Advanced
+    - When highscores is pressed player can the the top five scores(waves passed) 
+        - If not played before it's empty
+        - Back button present to go back to main menu
+        - Updates at the end of the game if one of the top five scores was beat
+    -  When quit is pressed is simply exits the application
+* Maps are generated from file
+    - Array gets populated with cube gameobjects
+    - File is collection of numbers
+        - Each number represents index in the array
+    - Each difficulty gets its own waypoints, start and end points, amount of lives, enemy health
+* Three buttons available on the right top side
+    - B to place beams towers
+    - T to place basic towers
+    - S to toggle tabs
+* Two types of towers
+    - Beam
+        - Shoots beam which damages and slows the enemy
+    - Basic
+        - Shoots basic bullets to damage enemies
+* Tabs contains three different tabs
+    - Towers
+    - Upgrades
+    - Game Info
+* Player can upgrade or buy new towers if collected enough gold by defeating enemies
+* Player can place towers by selecting B or T to place
+    - NOTE: Player must have enough gold to buy them
+        - If not enough gold then message is displayed in game info tab
+* Player can pause the game by pressing 'ESC' on keyboard
+    - To continue press 'ESC' again
+    - To exit press quit button
+    - To go menu press main menu
+* Upon player losing all the lives game over screen is displayed
+    - Player can enter their name
+        - If player beat one of top five, players name, wave number and difficulty gets put into top 5
+
 ### References
 * Graphics:
     - [Dev Assets](http://devassets.com/)
